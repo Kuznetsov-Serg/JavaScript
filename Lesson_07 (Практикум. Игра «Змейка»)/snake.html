@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра "Змейка"</title>
+  <link rel="stylesheet" href="style_site.css">
+</head>
+
+<body>
+  <div class="top">
+    <!-- Контейнер для адаптива под deskTop, mobile... большого разрешения -->
+    <div class="container top__box">
+      <ul class="header">
+        <li><a href="site_adaptive.html"><img src="img/logo.svg" alt="logo"></a></li>
+        <li><a href="contacts.html"><img src="img/contacts.svg" alt="contacts"></a></li>
+      </ul>
+    </div>
+    <div class="container snake">
+      <h3 class="what_we_do_header">Игра "Змейка"</h3>
+      <div class="snake_body">
+        <div class="what_we_do_item snake_card">
+          <!-- <img class="snake__img" src="img/snake.jpg" alt="card_1"> -->
+          <!-- <h4 class="card_header">Карта компьютера</h4> -->
+          <table id="game_snake" class="snake_table"></table>
+        </div>
+        <div class="what_we_do_item snake_card">
+          <div class="snake_top_card_2">
+            <img class="snake__img" src="img/snake.jpg" alt="card_2">
+            <div class="snake_button_box">
+              <a href="javascript:void(0)" class="snake__button snake_button_up_down_left_right" id="up_button">↑</a>
+              <div>
+                <a href="javascript:void(0)" class="snake__button snake_button_up_down_left_right"
+                  id="left_button">←</a>
+                <a href="javascript:void(0)" class="snake__button snake_button_up_down_left_right"
+                  id="right_button">→</a>
+              </div>
+              <a href="javascript:void(0)" class="snake__button snake_button_up_down_left_right" id="down_button">↓</a>
+            </div>
+          </div>
+          <h4 class="header" id="current_count">Текущий счет:</h4>
+          <div class="snake_button_box2">
+            <a href="javascript:void(0)" class="snake__button" id="playButton">Старт</a>
+            <a href="javascript:void(0)" class="snake__button" id="newGameButton">Новая игра</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="footer__box">
+      <div class="footer__hr">
+        <hr>
+      </div>
+      <div class="container footer__bottom text_white">
+        <div class="footer__bottom_item flex_space_around">
+          <div class="footer__adress_item footer__margin_1">
+            <p class="footer__margin_2">A.</p>
+            <p class="footer__adress_field">Как говорится в известной повести, пишите <i>"на&nbsp;деревню
+                дедушке"</i></p>
+          </div>
+          <div class="footer__adress_item footer__margin_1">
+            <p class="footer__margin_2">T.</p>
+            <a class="footer__adress_field" href="tel:+79992090008">+7-999-209-0008</a>
+          </div>
+          <div class="footer__adress_item">
+            <p class="footer__margin_2">E.</p>
+            <a class="footer__adress_field" href="mailto:ksn1974@mail.ru">ksn1974@mail.ru</a>
+          </div>
+        </div>
+        <p class="footer__Copyright">Copyright &copy; 2021 Kuznetsov Sergey</p>
+      </div>
+    </div>
+  </div>
+  <script src="snake.js"></script>
+</body>
+
+</html>
