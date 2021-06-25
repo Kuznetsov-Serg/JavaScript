@@ -1,0 +1,1097 @@
+@charset "UTF-8";
+/* обнуление стилей */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.text {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #1f3f68;
+  opacity: 0.6;
+}
+
+.text_white {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #ffff;
+}
+
+/* Основной контейнер для адаптации под DeskTop, SmartFone,... */
+.container {
+  max-width: 1140px;
+  /* если использовать width - теряем адаптив */
+  margin: 0 auto;
+  /* для центрирования */
+}
+
+.container_940 {
+  max-width: 940px;
+  /* если использовать width - теряем адаптив */
+  margin: 0 auto;
+  /* для центрирования */
+}
+
+.flex_space_around {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  /* чтобы перенос на след. строку */
+  /* margin: 0 -5px;     отступ, чтобы у крайних был слева и справа = 0 */
+}
+
+.aling_center {
+  text-align: center;
+}
+
+.header_menu {
+  height: 100px;
+  border: 1px solid #000;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* padding-left: 40px;
+	padding-right: 60px; */
+}
+
+.top {
+  min-height: 768px;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(8.84%, #EBF3FB), color-stop(31.12%, rgba(152, 195, 232, 0)));
+  background: linear-gradient(0deg, #EBF3FB 8.84%, rgba(152, 195, 232, 0) 31.12%);
+}
+
+/* для размешения картинки на весь блок */
+.top__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style-type: none;
+  padding-top: 42px;
+}
+
+/* Займет все оставшееся место в .top__box после .header */
+.top__info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding-top: 115px;
+  background-image: url("img/top_back.png");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 45%;
+}
+
+.top__heading {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  width: 510px;
+  margin-bottom: 32px;
+}
+
+.top__text {
+  width: 425px;
+}
+
+.top__button, .lotto__button, .ticTacToe__button, .snake__button {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  /* blue_04 */
+  background: #5A98D0;
+  -webkit-box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+          box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  border-radius: 10px;
+  padding: 15px 50px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 71px;
+}
+
+.lotto__button, .ticTacToe__button, .snake__button {
+  font-size: 26px;
+  margin-top: 40px;
+}
+
+.lotto__text, .ticTacToe__text, .snake__text {
+  margin-top: 40px;
+  color: red;
+  font-weight: bold;
+}
+
+.ticTacToe__text {
+  font-size: 30px;
+}
+
+.what_we_do {
+  padding-top: 64px;
+}
+
+.what_we_do_header {
+  font-size: 36px;
+  font-weight: 300;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.what_we_do_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.what_we_do_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 44px 32px;
+  width: 359px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+}
+
+.lotto, .ticTacToe, .snake {
+  padding-top: 30px;
+}
+
+.lotto_body, .ticTacToe_body, .snake_body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 22px;
+  padding-bottom: 22px;
+}
+
+.lotto_card, .ticTacToe_card {
+  width: 100%;
+  margin: 0 10px;
+}
+
+.lotto__img, .ticTacToe__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 15px;
+  height: 150px;
+}
+
+.card__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-bottom: 51px;
+  height: 200px;
+}
+
+.card_header {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #1F3F68;
+  margin-bottom: 14px;
+}
+
+.card_link {
+  margin-top: 30px;
+  font-size: 14px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #5A98D0;
+  text-decoration: none;
+}
+
+.project_header {
+  font-weight: 300;
+  font-size: 36px;
+  line-height: 46px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: #000000;
+}
+
+.project_text {
+  width: 75%;
+  margin: 32px auto 64px;
+  /* для центрирования блока */
+  text-align: center;
+  color: #222222;
+  opacity: 1;
+}
+
+.project__parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 32px;
+}
+
+.project_img {
+  width: 100%;
+}
+
+.project__item {
+  position: relative;
+  /* для размещения элемнтов друг поверх друга */
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.project__item_margin {
+  margin-right: 32px;
+}
+
+.project__item_text {
+  font-size: 32px;
+  line-height: 46px;
+  text-align: right;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  position: absolute;
+  /* для размещения элемнтов друг поверх друга */
+  top: 64px;
+  right: 64px;
+}
+
+.project__item_text_2 {
+  font-size: 28px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  position: absolute;
+  /* для размещения элемнтов друг поверх друга */
+  top: 32px;
+  left: 32px;
+}
+
+.footer {
+  margin-top: 112px;
+  padding-top: 91px;
+  padding-bottom: 64px;
+  background: #316099;
+}
+
+.footer__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+}
+
+.footer__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer__header {
+  width: 341px;
+  font-size: 36px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin-bottom: 32px;
+}
+
+.footer__text {
+  width: 495px;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  /* opacity: 0.6; */
+  margin-bottom: 96px;
+}
+
+.footer__button {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  background: #5A98D0;
+  padding: 15px 80px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.footer__hr {
+  opacity: 0.4;
+}
+
+.footer__bottom {
+  width: 100%;
+}
+
+.footer__bottom_item {
+  margin-top: 64px;
+}
+
+.footer__adress_item {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-preferred-size: 200px;
+      flex-basis: 200px;
+  /* min значение ширины блока */
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+
+.footer__margin_1 {
+  margin-right: 32px;
+}
+
+.footer__margin_2 {
+  margin-right: 19px;
+}
+
+.footer__adress_field {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  /* занять все оставшееся место*/
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer__Copyright {
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  opacity: 0.4;
+  margin-top: 64px;
+}
+
+/* страница "Контакты" */
+.contact_us {
+  min-height: 250px;
+  margin-top: 41px;
+  margin-bottom: 21px;
+  background-image: url("img/contact.jpg");
+  /* Путь к фоновому изображению */
+  background-size: cover;
+  /* background-size: contain; */
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact_us_box {
+  /* width: 780px; */
+  padding: 50px 365px 0 365px;
+  text-align: center;
+}
+
+.contact_us_header {
+  font-weight: 500;
+  font-size: 44px;
+  line-height: 74px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+}
+
+.contact_us_text {
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.address_and_send_message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  /* flex-wrap: wrap;	чтобы перенос на след. строку */
+  margin-top: 50px;
+  margin-bottom: 96px;
+}
+
+.address_and_send_message_item {
+  /* flex-grow: 1;
+	flex-basis: 200px;	min значение ширины блока */
+  /* border: 1px solid #000;  */
+  margin: 0 5px;
+  /* отступ между элементами */
+  /* align-items: center; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /* в столбец */
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.adress {
+  min-width: 400px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-bottom: 56px;
+  /* width: 500px; */
+}
+
+.send_message {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  /* box-shadow: 0 0 15px 5px blue; */
+  background: #FFFFFF;
+  -webkit-box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  padding: 20px 56px;
+  margin-left: 20px;
+  /* border: 1px solid #fff; */
+  border-radius: 10px;
+  padding-bottom: 56px;
+}
+
+.address_and_send_message__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin-top: 60px;
+  margin-bottom: 56px;
+  min-width: 100%;
+}
+
+.adress__header {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  margin-top: 40px;
+  margin-bottom: 24px;
+}
+
+.adress__text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  margin-bottom: 16px;
+  text-decoration: none;
+}
+
+.list_phone, .online_service {
+  /* list-style-image: url("img/telephone.png"); /* Путь к изображению маркера - не изменит размер, а он большой*/
+  list-style-type: none;
+}
+
+.phone::before {
+  background: url("img/telephone.png");
+  /* путь к нашему изображению */
+}
+
+.email::before {
+  background: url("img/email.png");
+  /* путь к нашему изображению */
+}
+
+.www::before {
+  background: url("img/www.png");
+  /* путь к нашему изображению */
+}
+
+.phone::before, .email::before, .www::before {
+  /* content: '❤';
+    color: blue; */
+  content: '';
+  /* для отображения контента в данном солучаи - background: url(./imeg/jVfPr0P4gm0.jpg); */
+  display: inline-block;
+  /* тоже необходим для отображения нашего изображения */
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  /* для отображения изображения в указанных нами размерами width, height */
+}
+
+.send_message__header {
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  opacity: 0.8;
+  margin-top: 32px;
+  margin-bottom: 8px;
+  width: 100%;
+}
+
+.input {
+  min-height: 72px;
+  border: 1px solid #356EAD;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0.4;
+  width: 100%;
+  /* flex-grow: 1; */
+}
+
+.input_height {
+  min-height: 144px;
+}
+
+.button {
+  /* flex-grow: 1; */
+  background: #5A98D0;
+  -webkit-box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+          box-shadow: 5px 20px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  padding: 23px 0;
+  margin-top: 72px;
+  margin-bottom: 56px;
+  width: 100%;
+}
+
+.content_map {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid #000;
+  height: 400px;
+  /* margin-bottom: 112px; */
+}
+
+.map {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+/* страница "LOTTO" */
+table.lotto_card {
+  text-decoration: none;
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+
+table.lotto_card th {
+  font-weight: bold;
+  font-size: 14px;
+  color: #ffffff;
+  background-color: #0f65a3;
+}
+
+table.lotto_card td {
+  font-weight: bold;
+  font-size: 13px;
+  color: green;
+  min-width: 20px;
+  height: 25px;
+}
+
+table.lotto_card td, table.lotto_card th {
+  white-space: pre-wrap;
+  padding: 10px 5px;
+  line-height: 13px;
+  vertical-align: middle;
+  border: 1px solid #0f65a3;
+}
+
+table.lotto_card tr:hover {
+  background-color: #f9fafb;
+}
+
+table.lotto_card tr:hover td {
+  color: #354251;
+  cursor: default;
+}
+
+/* страница игры "ЗМЕЯ"/SNAKE */
+.snake_top_card_2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.snake_button_box {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.snake_button_box2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.snake__img {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  height: 150px;
+  margin-bottom: 0px;
+}
+
+.snake_button_up_down_left_right {
+  margin: 10px;
+}
+
+.snake_card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  margin: 0 10px;
+}
+
+.snake_table td.cell {
+  width: 25px;
+  height: 25px;
+  border: 1px dotted #eee;
+  border-collapse: collapse;
+  background: #2e353d;
+  text-align: center;
+}
+
+td.cell.snakeBody {
+  background: #e5e5e5;
+}
+
+td.cell.snakeHead {
+  background: #9b0013;
+}
+
+.snake__button.disabled {
+  background: #7c7c7c;
+}
+
+.snake__button.disabled:hover {
+  background: #7c7c7c;
+}
+
+.snake__button.menuButton:hover {
+  background: #009641;
+}
+
+#greyProgress {
+  margin-top: 35px;
+  width: 100%;
+  background-color: #ddd;
+}
+
+#greenBar {
+  width: 0%;
+  height: 30px;
+  background-color: #4CAF50;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+}
+
+/* Адаптивность */
+/* laptop 1024px */
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+  .top__info {
+    background-position: right 280px;
+  }
+  .what_we_do_body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 127px;
+  }
+  .what_we_do_item {
+    margin-top: 32px;
+  }
+  .lotto_body, .snake_body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 127px;
+  }
+  .footer {
+    margin-top: 64px;
+    padding-top: 47px;
+  }
+  .footer__top {
+    padding-left: 89px;
+    padding-right: 89px;
+  }
+  .footer__top_item_1 {
+    width: 336px;
+  }
+  .footer__header {
+    width: 100%;
+  }
+  .footer__text {
+    width: 100%;
+    margin-bottom: 64px;
+  }
+  .footer__button {
+    padding: 7px 30px;
+  }
+  .footer__bottom {
+    padding-left: 89px;
+    padding-right: 89px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* padding не учитываем при расчете ширины и высоты */
+  }
+  .footer__bottom_item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__adress_item {
+    -ms-flex-preferred-size: 0;
+        flex-basis: 0;
+    margin-bottom: 25px;
+  }
+  .footer__margin_1 {
+    margin-right: 0;
+  }
+  .footer__Copyright {
+    margin-top: 39px;
+    /* 64px - 25px = 39px */
+  }
+  /* страница "Контакты" */
+  .contact_us_box {
+    padding-left: 124px;
+    padding-right: 124px;
+  }
+  .address_and_send_message {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 124px;
+    padding-right: 124px;
+    margin-bottom: 64px;
+  }
+  .address_and_send_message_item {
+    margin: 0;
+  }
+  .adress {
+    min-width: 300px;
+  }
+  .send_message {
+    width: 100%;
+  }
+}
+
+/* phone 668px */
+@media (max-width: 668px) {
+  .top {
+    min-height: 376px;
+    padding-bottom: 41px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    /* padding не учитываем при расчете ширины и высоты */
+  }
+  .container {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .top__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 36px;
+    background-image: none;
+  }
+  .header {
+    padding-top: 24px;
+  }
+  .top__heading {
+    font-size: 32px;
+    line-height: 37px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+  .top__text {
+    text-align: center;
+    width: 100%;
+  }
+  .top__button, .lotto__button, .ticTacToe__button {
+    font-size: 12px;
+    line-height: 26px;
+    padding: 0 8px;
+    margin-top: 32px;
+  }
+  .snake__button {
+    font-size: 12px;
+    line-height: 26px;
+    margin-top: 20px;
+  }
+  .lotto__button, .ticTacToe__button, .snake__button {
+    font-size: 20px;
+    margin-top: 12px;
+  }
+  .what_we_do {
+    padding-top: 48px;
+  }
+  .lotto, .ticTacToe, .snake {
+    padding-top: 24px;
+  }
+  .what_we_do_header {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .what_we_do_body {
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+  .what_we_do_item {
+    width: 100%;
+  }
+  .project_text {
+    width: 100%;
+    margin-bottom: 84px;
+  }
+  .project__parent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 0;
+  }
+  .project__item {
+    margin-top: 16px;
+  }
+  .project__item_margin {
+    margin-right: 0;
+  }
+  .project__item_text {
+    width: 191px;
+    font-size: 16px;
+    line-height: 19px;
+    top: 16px;
+    right: 16px;
+  }
+  .project__item_text_2 {
+    font-size: 16px;
+    line-height: 19px;
+    top: 16px;
+    left: 16px;
+  }
+  .lotto_body, .ticTacToe_body, .snake_body {
+    padding-top: 32px;
+    padding-bottom: 64px;
+  }
+  .lotto__img, .ticTacToe__img, .snake__img {
+    display: none;
+  }
+  .snake_top_card_2 {
+    display: flow-root;
+  }
+  .footer {
+    margin-top: 32px;
+    padding-top: 18px;
+    padding-bottom: 32px;
+  }
+  .footer__top {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .footer__top_item_1 {
+    width: 100%;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .footer__header {
+    font-size: 24px;
+    line-height: 28px;
+    text-align: center;
+  }
+  .footer__text {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  .footer__button {
+    margin-bottom: 41px;
+  }
+  .footer__bottom_item {
+    margin-top: 32px;
+  }
+  .footer__Copyright {
+    margin-top: 12px;
+    /* 37px - 25px = 12px */
+    text-align: center;
+  }
+  /* страница "Контакты" */
+  .contact_us_box {
+    padding-left: 17px;
+    padding-right: 17px;
+  }
+  .contact_us_header {
+    font-size: 24px;
+    line-height: 28px;
+  }
+  .contact_us_text {
+    font-size: 16px;
+    line-height: 30px;
+  }
+  .container_940- {
+    padding: 50px 17px;
+  }
+  .address_and_send_message {
+    padding-left: 17px;
+    padding-right: 17px;
+    margin-bottom: 64px;
+  }
+  .address_and_send_message_item {
+    margin: 0;
+  }
+  .adress {
+    min-width: 300px;
+  }
+  .send_message {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=style_site.css.map */
