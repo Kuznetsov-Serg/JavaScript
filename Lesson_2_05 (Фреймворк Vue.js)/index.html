@@ -99,8 +99,8 @@
     <div id="app">
         <header>
             <input type="text" v-model="searchLine" class="goods-search" v-on:input="show($event.target.value)"/>
-            <button class="search-button" type="button" v-on:click=FilterGoods>Искать</button>
-            <button class="cart-button" type="button" v-on:click=ChangeVisibleBasket>Корзина</button>
+            <button class="search-button" type="button" v-on:click=filterGoods>Искать</button>
+            <button class="cart-button" type="button" v-on:click=changeVisibleBasket>Корзина</button>
         </header>
         
         <main>
