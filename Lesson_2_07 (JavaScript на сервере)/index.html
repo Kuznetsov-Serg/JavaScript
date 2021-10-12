@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./front/style.css">
+    <title>eShop</title>
+    <style></style>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <vue-search :goods="goods" :filtered_goods="filteredGoods" v-on:filter_goods="filter_goods"></vue-search>
+        </header>
+        
+        <main>
+            <goods-list :goods="filteredGoods" :basket="basket" v-on:change_basket="change_basket"></goods-list>
+            <br>
+            <div v-if="isVisibleCart">
+                <button class="cart-button" type="button" v-on:click=changeVisibleBasket>Скрыть Корзину</button>
+                <br>
+                <basket-list :basket="basket" v-on:change_basket="change_basket"></basket-list>
+            </div>
+            <button v-else class="cart-button" type="button" v-on:click=changeVisibleBasket>Показать Корзину</button>
+            <br>
+            <vue-error :flag_error="flagError" :error_description="errorDescription" v-on:clear_error="clear_error"></vue-error>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="./front/front_script.js"></script>
+    </body>
+
+</html>
