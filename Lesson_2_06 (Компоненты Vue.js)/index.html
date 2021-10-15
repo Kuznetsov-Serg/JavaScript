@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eShop</title>
+    <style>
+        table {
+            border-collapse: collapse;
+        }
+
+        tr {
+            width: 30px;
+            height: 30px;
+        }
+
+        td {
+            border: 1px solid #888;
+            /* min-width: 130px; */
+            height: 30px;
+            background-color: white;
+            text-align: center;
+        }
+
+        td.table_head {
+            background-color: steelblue;
+        }
+        td.table_foot {
+            background-color: rgb(8, 231, 45);
+        }
+
+        .my-btn {
+            font-size: 16px;
+            line-height: 26px;
+            text-align: center;
+            letter-spacing: 0.04em;
+            color: #FFFFFF;
+            background: #5A98D0;
+            -webkit-box-shadow: 5px 10px 20px rgb(53 110 173 / 20%);
+            box-shadow: 5px 10px 20px rgb(53 110 173 / 20%);
+            border-radius: 10px;
+            padding: 15px 50px;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 40px;
+        }
+
+        .galleryWrapper__screen {
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #222;
+            opacity: 0.8;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            display: block;
+            text-align: center;
+        }
+
+        .galleryWrapper__image {
+            max-height: 80%;
+            max-width: 80%;
+            z-index: 101;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+        }
+
+        .galleryWrapper__close {
+            z-index: 101;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .galleryWrapper__next {
+            z-index: 101;
+            position: absolute;
+            top: 50%;
+            right: 0;
+        }
+
+        .galleryWrapper__back {
+            z-index: 101;
+            position: absolute;
+            top: 50%;
+            left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <vue-search :goods="goods" :filtered_goods="filteredGoods" v-on:filter_goods="filter_goods"></vue-search>
+        </header>
+        
+        <main>
+            <goods-list :goods="filteredGoods" :basket="basket"></goods-list>
+            <br>
+            <div v-if="isVisibleCart">
+                <button class="cart-button" type="button" v-on:click=changeVisibleBasket>Скрыть Корзину</button>
+                <br>
+                <basket-list :basket="basket"></basket-list>
+            </div>
+            <button v-else class="cart-button" type="button" v-on:click=changeVisibleBasket>Показать Корзину</button>
+            <br>
+            <vue-error :flag_error="flagError" :error_description="errorDescription" v-on:clear_error="clear_error"></vue-error>
+        </main>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.js"></script>
+    <script src="script.js"></script>
+    </body>
+
+</html>
